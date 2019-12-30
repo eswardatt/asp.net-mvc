@@ -1,0 +1,40 @@
+﻿@model IEnumerable<basics.Models.Emplpoyee>
+@using basics.Models;
+
+@{
+    ViewBag.Title = "Get";
+}
+
+<h2>Employees</h2>
+<div class="container">
+
+    <table class="table table-striped">
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Actions
+            </th>
+        </tr>
+    @foreach(Emplpoyee emp in Model)
+    {
+        <tr>
+            <td>
+                @emp.Name
+            </td>
+            <td>
+                @emp.Email
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { ID = emp.ID })
+                @Html.ActionLink("Delete", "Delete", new { ID = emp.ID })
+            </td>
+        </tr>
+    }
+    </table>
+
+</div>

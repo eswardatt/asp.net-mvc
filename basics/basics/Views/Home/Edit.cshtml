@@ -1,0 +1,19 @@
+﻿@model basics.Models.Emplpoyee
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<table>
+    <tr>
+        <td>Name:</td>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <td>Email:</td>
+        <td>@Model.Email</td>
+    </tr>
+</table>
+@Html.ActionLink("Back","Get")
